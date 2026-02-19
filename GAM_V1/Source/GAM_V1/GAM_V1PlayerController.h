@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+
+#include "HUDWidget.h"
+
 #include "GAM_V1PlayerController.generated.h"
 
 class UInputMappingContext;
@@ -54,4 +57,10 @@ protected:
 
 	/** Returns true if the player should use UMG touch controls */
 	bool ShouldUseTouchControls() const;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UHUDWidget> HUDWidgetClass;
+
+	UPROPERTY(VisibleAnywhere)
+	UHUDWidget* HUDWidget;
 };
