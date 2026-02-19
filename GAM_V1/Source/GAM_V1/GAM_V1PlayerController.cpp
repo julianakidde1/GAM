@@ -38,6 +38,12 @@ void AGAM_V1PlayerController::BeginPlay()
 
 		}
 
+		HUDWidget =CreateWidget<UHUDWidget>(this, HUDWidgetClass);
+		if (HUDWidget)
+		{
+			HUDWidget->AddToViewport();
+		}
+
 	}
 }
 
