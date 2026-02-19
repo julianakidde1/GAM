@@ -58,7 +58,7 @@ protected:
 	/** Returns true if the player should use UMG touch controls */
 	bool ShouldUseTouchControls() const;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI")
 	TSubclassOf<UHUDWidget> HUDWidgetClass;
 
 	UPROPERTY(VisibleAnywhere)
