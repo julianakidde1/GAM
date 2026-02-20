@@ -38,6 +38,18 @@ void AGun::PullTrigger()
 
 	OwnerController->GetPlayerViewPoint(ViewPointLocation, ViewPointRotation);
 
-	DrawDebugCamera(GetWorld(), ViewPointLocation, ViewPointRotation, 90.0f, 2.0f, FColor::Red, true);
+	FVector EndLocation = ViewPointLocation + ViewPointRotation.Vector() * MaxRange;
+
+	FHitResult HitResult; 
+	FCollisionQueryParams Params; //will be passed in line trace funtion
+	Params.AddIgnoredActor(this); // so the gun (+ the player below) aren't hit by the line trace
+	Params.AddIgnoredActor(GetOwner());
+	
+	bool IsHit = GetWorld()->LineTraceSingleByChannel(HitResult, ViewPointLocation, EndLocation, ECC_GameTraceChannel2, Params);
+
+	if (IsHit)
+	{
+		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 5.0f, 16, FColor::Red, true);
+	}
 
 }
