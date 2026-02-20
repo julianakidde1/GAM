@@ -10,6 +10,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GAM_V1.h"
 
+
 AGAM_V1Character::AGAM_V1Character()
 {
 	// Set size for collision capsule
@@ -44,6 +45,17 @@ AGAM_V1Character::AGAM_V1Character()
 	GetCharacterMovement()->AirControl = 0.5f;
 }
 
+void AGAM_V1Character::BeginPlay()
+{
+	Super::BeginPlay();
+	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
+	if (Gun)
+	{
+		Gun -> SetOwner(this); 
+	}
+	
+}
+
 void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {	
 	// Set up action bindings
@@ -67,12 +79,6 @@ void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	{
 		UE_LOG(LogGAM_V1, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
-}
-
-void AGAM_V1Character::Shoot()
-{
-	UE_LOG(LogTemp, Display, TEXT("Shoot!"));
-	//Pull the trigger of the gun
 }
 
 void AGAM_V1Character::MoveInput(const FInputActionValue& Value)
@@ -125,4 +131,10 @@ void AGAM_V1Character::DoJumpEnd()
 {
 	// pass StopJumping to the character
 	StopJumping();
+}
+
+void AGAM_V1Character::Shoot()
+{
+	if(Gun)
+		Gun -> PullTrigger(); 
 }

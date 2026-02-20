@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+
+#include "Gun.h"
+
 #include "GAM_V1Character.generated.h"
 
 class UInputComponent;
@@ -32,6 +35,7 @@ class AGAM_V1Character : public ACharacter
 	UCameraComponent* FirstPersonCameraComponent;
 
 protected:
+	virtual void BeginPlay() override;
 
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
@@ -94,5 +98,10 @@ public:
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
 	void Shoot();
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AGun> GunClass;
+	
+	AGun* Gun;
 };
 
