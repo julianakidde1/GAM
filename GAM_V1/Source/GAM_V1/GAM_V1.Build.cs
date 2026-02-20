@@ -18,7 +18,8 @@ public class GAM_V1 : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate"
+			"Slate", 
+			"Niagara"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
