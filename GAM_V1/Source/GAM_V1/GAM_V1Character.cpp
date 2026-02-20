@@ -59,6 +59,9 @@ void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		// Looking/Aiming
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AGAM_V1Character::LookInput);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AGAM_V1Character::LookInput);
+
+		// Shooting
+		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &AGAM_V1Character::Shoot);
 	}
 	else
 	{
@@ -66,6 +69,11 @@ void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	}
 }
 
+void AGAM_V1Character::Shoot()
+{
+	UE_LOG(LogTemp, Display, TEXT("Shoot!"));
+	//Pull the trigger of the gun
+}
 
 void AGAM_V1Character::MoveInput(const FInputActionValue& Value)
 {
