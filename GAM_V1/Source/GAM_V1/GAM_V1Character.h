@@ -107,6 +107,7 @@ public:
 
 	float Health; 
 
+	UPROPERTY(BlueprintReadOnly)
 	bool IsAlive = true; 
 	
 	AGun* Gun;
