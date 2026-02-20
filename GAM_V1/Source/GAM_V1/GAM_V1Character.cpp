@@ -48,6 +48,8 @@ AGAM_V1Character::AGAM_V1Character()
 void AGAM_V1Character::BeginPlay()
 {
 	Super::BeginPlay();
+
+	OnTakeAnyDamage.AddDynamic(this, &AGAM_V1Character::OnDamageTaken); // when a character takes damage, this UFUNCTION will get called 
 	
 	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
 
@@ -144,4 +146,9 @@ void AGAM_V1Character::Shoot()
 {
 	if(Gun)
 		Gun -> PullTrigger(); 
+}
+
+void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const UDamageType *DamageType, AController *InstigatedBy, AActor *DamageCauser)
+{
+	UE_LOG(LogTemp, Display, TEXT("Damage taken: %f"), Damage); 
 }
