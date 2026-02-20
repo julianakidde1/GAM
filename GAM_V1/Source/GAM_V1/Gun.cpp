@@ -10,7 +10,10 @@ AGun::AGun()
 	PrimaryActorTick.bCanEverTick = true;
 
 	SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
-	
+	SetRootComponent(SceneRoot);
+
+	Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+	Mesh-> SetupAttachment(SceneRoot);
 
 }
 
