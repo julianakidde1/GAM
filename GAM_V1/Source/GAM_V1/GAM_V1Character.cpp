@@ -51,8 +51,9 @@ void AGAM_V1Character::BeginPlay()
 
 	OnTakeAnyDamage.AddDynamic(this, &AGAM_V1Character::OnDamageTaken); // when a character takes damage, this UFUNCTION will get called 
 	
-	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
+	Health = MaxHealth; 
 
+	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
 	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
 	if (Gun)
 	{
@@ -150,5 +151,15 @@ void AGAM_V1Character::Shoot()
 
 void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const UDamageType *DamageType, AController *InstigatedBy, AActor *DamageCauser)
 {
-	UE_LOG(LogTemp, Display, TEXT("Damage taken: %f"), Damage); 
+	if (IsAlive)
+	{
+		Health -= Damage; 
+		if (Health <= 0.0f) 
+		{
+			IsAlive = false; 
+			Health = 0.0f; 
+			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision); //once the character dies, we turn of the collision
+		}
+	}
+
 }
