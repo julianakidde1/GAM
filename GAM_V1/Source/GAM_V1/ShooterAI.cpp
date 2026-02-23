@@ -9,12 +9,18 @@ void AShooterAI::BeginPlay()
 {
     Super::BeginPlay();
 
+    if (EnemyAIBehaviorTree)
+    {
+        RunBehaviorTree(EnemyAIBehaviorTree);
+    }
+
 }
 
 void AShooterAI::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
+    /* switching to behavior trees
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0); 
     if (PlayerPawn) //the player pawn will be what the enemyAI focus on
     {
@@ -32,6 +38,7 @@ void AShooterAI::Tick(float DeltaTime)
         
         
     }
+    */
 
 
 }
