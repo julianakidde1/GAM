@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+
+#include "Gun.h"
+
 #include "GAM_V1Character.generated.h"
 
 class UInputComponent;
@@ -32,6 +35,7 @@ class AGAM_V1Character : public ACharacter
 	UCameraComponent* FirstPersonCameraComponent;
 
 protected:
+	virtual void BeginPlay() override;
 
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
@@ -48,6 +52,9 @@ protected:
 	/** Mouse Look Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	class UInputAction* MouseLookAction;
+
+	UPROPERTY(EditAnywhere, Category ="Input")
+	class UInputAction* ShootAction;
 	
 public:
 	AGAM_V1Character();
@@ -90,5 +97,22 @@ public:
 	/** Returns first person camera component **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+	void Shoot();
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AGun> GunClass;
+
+	UPROPERTY(EditAnywhere)
+	float MaxHealth = 100.0f; 
+
+	float Health; 
+
+	UPROPERTY(BlueprintReadOnly)
+	bool IsAlive = true; 
+	
+	AGun* Gun;
+
+	UFUNCTION()
+	void OnDamageTaken(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser); // uses the OnTakeAnyDamage delegate 
 };
 

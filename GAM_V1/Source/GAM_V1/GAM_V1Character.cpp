@@ -10,6 +10,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GAM_V1.h"
 
+
 AGAM_V1Character::AGAM_V1Character()
 {
 	// Set size for collision capsule
@@ -44,6 +45,27 @@ AGAM_V1Character::AGAM_V1Character()
 	GetCharacterMovement()->AirControl = 0.5f;
 }
 
+void AGAM_V1Character::BeginPlay()
+{
+	Super::BeginPlay();
+
+	OnTakeAnyDamage.AddDynamic(this, &AGAM_V1Character::OnDamageTaken); // when a character takes damage, this UFUNCTION will get called 
+	
+	Health = MaxHealth; 
+
+	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
+	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
+	if (Gun)
+	{
+		Gun -> SetOwner(this); 
+		Gun ->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+		Gun->OwnerController = GetController();
+	}
+
+	
+	
+}
+
 void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {	
 	// Set up action bindings
@@ -59,13 +81,15 @@ void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		// Looking/Aiming
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AGAM_V1Character::LookInput);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AGAM_V1Character::LookInput);
+
+		// Shooting
+		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &AGAM_V1Character::Shoot);
 	}
 	else
 	{
 		UE_LOG(LogGAM_V1, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
 }
-
 
 void AGAM_V1Character::MoveInput(const FInputActionValue& Value)
 {
@@ -117,4 +141,25 @@ void AGAM_V1Character::DoJumpEnd()
 {
 	// pass StopJumping to the character
 	StopJumping();
+}
+
+void AGAM_V1Character::Shoot()
+{
+	if(Gun)
+		Gun -> PullTrigger(); 
+}
+
+void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const UDamageType *DamageType, AController *InstigatedBy, AActor *DamageCauser)
+{
+	if (IsAlive)
+	{
+		Health -= Damage; 
+		if (Health <= 0.0f) 
+		{
+			IsAlive = false; 
+			Health = 0.0f; 
+			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision); //once the character dies, we turn of the collision
+		}
+	}
+
 }
