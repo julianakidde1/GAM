@@ -9,13 +9,6 @@ void AShooterAI::BeginPlay()
 {
     Super::BeginPlay();
 
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0); 
-    if (PlayerPawn) //the player pawn will be what the enemyAI focus on
-    {
-        SetFocus(PlayerPawn);
-        
-    }
-
 }
 
 void AShooterAI::Tick(float DeltaTime)
@@ -25,7 +18,18 @@ void AShooterAI::Tick(float DeltaTime)
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0); 
     if (PlayerPawn) //the player pawn will be what the enemyAI focus on
     {
-        MoveToActor(PlayerPawn, 200.0f);
+       if (LineOfSightTo(PlayerPawn)) // the enemy can only move towards the player if they can see them
+       {
+            SetFocus(PlayerPawn);
+            MoveToActor(PlayerPawn, 200.0f);
+       }
+
+       else
+       {
+            ClearFocus(EAIFocusPriority::Gameplay);
+            StopMovement();
+       }
+        
         
     }
 
