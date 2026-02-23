@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+
+#include "GAM_V1Character.h"
+
 #include "ShooterAI.generated.h"
 
 /**
@@ -22,4 +25,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	UBehaviorTree* EnemyAIBehaviorTree;
+
+	AGAM_V1Character* PlayerCharacter;
+	AGAM_V1Character* MyCharacter; // The character the AIController is controlling (the enemy)
+
+	void StartBehaviorTree(AGAM_V1Character* Player);
 };

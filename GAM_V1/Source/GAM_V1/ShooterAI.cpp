@@ -8,12 +8,6 @@
 void AShooterAI::BeginPlay()
 {
     Super::BeginPlay();
-
-    if (EnemyAIBehaviorTree)
-    {
-        RunBehaviorTree(EnemyAIBehaviorTree);
-    }
-
 }
 
 void AShooterAI::Tick(float DeltaTime)
@@ -40,5 +34,20 @@ void AShooterAI::Tick(float DeltaTime)
     }
     */
 
+
+}
+
+void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player)
+{
+    if (EnemyAIBehaviorTree)
+    {
+        MyCharacter = Cast<AGAM_V1Character>(GetPawn()); // getting the character that the AIController is controlling
+        if (Player)
+        {
+            PlayerCharacter = Player; 
+        }
+
+        RunBehaviorTree(EnemyAIBehaviorTree);
+    }
 
 }
