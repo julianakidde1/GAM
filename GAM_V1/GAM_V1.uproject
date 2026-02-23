@@ -58,6 +58,10 @@
 		{
 			"Name": "MetaHumanLiveLink",
 			"Enabled": true
+		},
+		{
+			"Name": "CascadeToNiagaraConverter",
+			"Enabled": true
 		}
 	]
 }
