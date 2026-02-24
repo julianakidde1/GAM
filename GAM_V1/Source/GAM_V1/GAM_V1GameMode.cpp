@@ -15,7 +15,7 @@ void AGAM_V1GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AGAM_V1Character* Player = Cast<AGAM_V1Character>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)); // Getting the player [since we do it in the BeginPlay of the GameMode we only have to do it once; doing it in the ShooterAI would require it to be done multiple times.]
+	AGAM_V1Character* Player = Cast<AGAM_V1Character>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)); // Getting the player [since we do it in the BeginPlay of the GameMode we only have to do it once; doing it in the ShooterAI would require it to be done multiple times for each enemy instance. we will them loop over the enemy actors and give them the player character]
 
 	TArray<AActor*> ShooterActors; 
 	 UGameplayStatics::GetAllActorsOfClass(GetWorld(), AShooterAI::StaticClass(), ShooterActors); // saving all the shooter actors for the AI conttoller into the array. 

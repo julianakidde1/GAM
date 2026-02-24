@@ -37,14 +37,14 @@ void AShooterAI::Tick(float DeltaTime)
 
 }
 
-void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player)
+void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player) // the 'Player' var is set in the 'GameMode.cpp'
 {
     if (EnemyAIBehaviorTree)
     {
-        MyCharacter = Cast<AGAM_V1Character>(GetPawn()); // getting the character that the AIController is controlling
+        MyCharacter = Cast<AGAM_V1Character>(GetPawn()); // getting the character that this AIController is controlling
         if (Player)
         {
-            PlayerCharacter = Player; 
+            PlayerCharacter = Player; // setting the argument to the member var
         }
 
         RunBehaviorTree(EnemyAIBehaviorTree);
