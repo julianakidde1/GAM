@@ -37,7 +37,7 @@ void AShooterAI::Tick(float DeltaTime)
 
 }
 
-void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player) // the 'Player' var is set in the 'GameMode.cpp'
+void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player) // this function is called in the 'GameMode.cpp', the 'Player' is set there as well
 {
     if (EnemyAIBehaviorTree)
     {
