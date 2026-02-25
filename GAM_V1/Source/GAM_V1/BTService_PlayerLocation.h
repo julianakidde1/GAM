@@ -13,5 +13,8 @@ UCLASS()
 class GAM_V1_API UBTService_PlayerLocation : public UBTService_BlackboardBase
 {
 	GENERATED_BODY()
+		UBTService_PlayerLocation(); 
+
+		virtual void TickNode ( UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override; 
 	
 };
