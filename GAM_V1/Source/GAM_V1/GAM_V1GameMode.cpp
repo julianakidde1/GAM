@@ -21,9 +21,8 @@ void AGAM_V1GameMode::BeginPlay()
 	 UGameplayStatics::GetAllActorsOfClass(GetWorld(), AShooterAI::StaticClass(), ShooterAIActors); // saving all the shooter actors for the AI conttoller into the array. 
 
 
-	 for (int32 LoopIndex = 0; LoopIndex < ShooterAIActors.Num(); LoopIndex++)
+	 for (AActor* ShooterAIActor : ShooterAIActors)
 	 {
-		AActor* ShooterAIActor = ShooterAIActors[LoopIndex] ;
 		AShooterAI* ShooterAI = Cast<AShooterAI>(ShooterAIActor);
 
 		if (ShooterAI)
