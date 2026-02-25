@@ -159,6 +159,8 @@ void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const U
 			IsAlive = false; 
 			Health = 0.0f; 
 			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision); //once the character dies, we turn of the collision
+			DetachFromControllerPendingDestroy(); //once dead, player can't move controller
+
 		}
 	}
 
