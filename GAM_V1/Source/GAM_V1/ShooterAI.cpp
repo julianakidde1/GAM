@@ -54,7 +54,6 @@ void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player) // this function is
         UBlackboardComponent* MyBlackboard = GetBlackboardComponent();
         if (MyBlackboard && PlayerCharacter && MyCharacter) //checking that both are valid
         {
-            MyBlackboard->SetValueAsVector("PlayerLocation", PlayerCharacter->GetActorLocation());
             MyBlackboard->SetValueAsVector("StartLocation", MyCharacter->GetActorLocation());
         }
 
