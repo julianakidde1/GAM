@@ -157,7 +157,12 @@ void AGAM_V1Character::UpdateHUD()
 	AGAM_V1PlayerController* PlayerController = Cast<AGAM_V1PlayerController>(GetController());
 	if (PlayerController)
 	{
-		PlayerController->HUDWidget->SetHealthBarPercent(Health / MaxHealth); 
+		float NewPercent = Health / MaxHealth; 
+		if (NewPercent < 0.0f)
+		{
+			NewPercent = 0.0f;
+		}
+		PlayerController->HUDWidget->SetHealthBarPercent(NewPercent); 
 	}
 }
 
@@ -166,6 +171,7 @@ void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const U
 	if (IsAlive)
 	{
 		Health -= Damage; 
+		UpdateHUD();
 		if (Health <= 0.0f) 
 		{
 			IsAlive = false; 
@@ -175,7 +181,7 @@ void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const U
 
 		}
 
-		UpdateHUD();
+		
 	}
 
 }
