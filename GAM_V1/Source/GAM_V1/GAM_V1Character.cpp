@@ -10,6 +10,8 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GAM_V1.h"
 
+#include "GAM_V1PlayerController.h"
+
 
 AGAM_V1Character::AGAM_V1Character()
 {
@@ -52,6 +54,7 @@ void AGAM_V1Character::BeginPlay()
 	OnTakeAnyDamage.AddDynamic(this, &AGAM_V1Character::OnDamageTaken); // when a character takes damage, this UFUNCTION will get called 
 	
 	Health = MaxHealth; 
+	UpdateHUD();
 
 	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
 	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
@@ -149,17 +152,36 @@ void AGAM_V1Character::Shoot()
 		Gun -> PullTrigger(); 
 }
 
+void AGAM_V1Character::UpdateHUD()
+{
+	AGAM_V1PlayerController* PlayerController = Cast<AGAM_V1PlayerController>(GetController());
+	if (PlayerController)
+	{
+		float NewPercent = Health / MaxHealth; 
+		if (NewPercent < 0.0f)
+		{
+			NewPercent = 0.0f;
+		}
+		PlayerController->HUDWidget->SetHealthBarPercent(NewPercent); 
+	}
+}
+
 void AGAM_V1Character::OnDamageTaken(AActor *DamagedActor, float Damage, const UDamageType *DamageType, AController *InstigatedBy, AActor *DamageCauser)
 {
 	if (IsAlive)
 	{
 		Health -= Damage; 
+		UpdateHUD();
 		if (Health <= 0.0f) 
 		{
 			IsAlive = false; 
 			Health = 0.0f; 
 			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision); //once the character dies, we turn of the collision
+			DetachFromControllerPendingDestroy(); //once dead, player can't move controller
+
 		}
+
+		
 	}
 
 }

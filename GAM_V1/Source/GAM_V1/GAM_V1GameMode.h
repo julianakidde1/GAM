@@ -16,6 +16,11 @@ class AGAM_V1GameMode : public AGameModeBase
 
 public:
 	AGAM_V1GameMode();
+
+protected: 
+	virtual void BeginPlay() override; 
+
+	
 };
 
 
