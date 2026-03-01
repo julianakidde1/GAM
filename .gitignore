@@ -1,0 +1,19 @@
+# Unreal Engine generated
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep project files
+!Config/
+!Content/
+!Source/
+!*.uproject
