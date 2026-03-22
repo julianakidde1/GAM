@@ -1,0 +1,72 @@
+[33mfd3e6fe9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mMassEntityTest01[m[33m)[m HEAD@{0}: 
+[33m30770d24[m HEAD@{1}: commit: Stop LFS tracking
+[33m6e855379[m HEAD@{2}: commit: Mass entity, city traffic and pedestrian tests.
+[33mc0681672[m HEAD@{3}: commit: Mass entity, city traffic and pedestrian tests.
+[33mfc36262d[m[33m ([m[1;31morigin/MassEntityTest01[m[33m)[m HEAD@{4}: commit: Added uassets to test Mass Entity system.
+[33m2cf52786[m HEAD@{5}: commit: Adding the mass entity plugins.
+[33m27ef9d5c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{6}: checkout: moving from main to MassEntityTest01
+[33m27ef9d5c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{7}: commit: Restore Unreal project with LFS
+[33m1c033e2a[m HEAD@{8}: commit: Enable Git LFS for Unreal assets
+[33m3aeaedaa[m HEAD@{9}: checkout: moving from main to main
+[33m3aeaedaa[m HEAD@{10}: checkout: moving from TestingBranch2 to main
+[33m3aeaedaa[m HEAD@{11}: checkout: moving from main to TestingBranch2
+[33m3aeaedaa[m HEAD@{12}: checkout: moving from FP_PV to main
+[33m3aeaedaa[m HEAD@{13}: checkout: moving from main to FP_PV
+[33m3aeaedaa[m HEAD@{14}: pull: Fast-forward
+[33m27cfc427[m HEAD@{15}: checkout: moving from Sound to main
+[33mec5de1bb[m[33m ([m[1;31morigin/Sound[m[33m)[m HEAD@{16}: commit: Final unreal asset files for base game.
+[33mf6b40331[m HEAD@{17}: commit: Final unreal asset files for base game.
+[33mb20ae97a[m HEAD@{18}: commit: Adding shooting and impact sounds.
+[33m27cfc427[m HEAD@{19}: checkout: moving from main to Sound
+[33m27cfc427[m HEAD@{20}: pull: Fast-forward
+[33meb87eab6[m HEAD@{21}: checkout: moving from AIController1 to main
+[33m96adec14[m[33m ([m[1;31morigin/AIController1[m[33m)[m HEAD@{22}: commit: Pushing updated unreal assets and blueprint files.
+[33m4ff2bb51[m HEAD@{23}: commit: Updating the progress bar so it completely depletes to zero.
+[33m3647c5d5[m HEAD@{24}: commit: Adding Health Progress bar.
+[33m3b0afb2f[m HEAD@{25}: commit: Calling detach function: once dead, player loses controller.
+[33m0b5ebdb6[m HEAD@{26}: commit: Adding BT shoot task functionality.
+[33mded42542[m HEAD@{27}: commit: Source code for BT shooting task.
+[33m56467fff[m HEAD@{28}: commit: Writing ClearValue task: will be used to clear the LastKnownPlayerLocation.
+[33m7fe53c28[m HEAD@{29}: commit: Source code for custom BTTask class.
+[33m2a044865[m HEAD@{30}: commit: Fixing building error.
+[33me0e1c323[m HEAD@{31}: commit: Setting last known location.
+[33ma04ff180[m HEAD@{32}: commit: Source code for new service class:checking lastKnownPlayerLocation.
+[33m2203ba7d[m HEAD@{33}: commit: Setting player location if enemy has line of sight.
+[33m9c0b165b[m HEAD@{34}: commit: Creating PlayerLocation service task.
+[33md0f75196[m HEAD@{35}: commit: Changes made on BT_EnemyAI and BBEnemyAI.
+[33md0526aac[m HEAD@{36}: commit: Base files for 'PlayerLocation' service class
+[33me241615e[m HEAD@{37}: commit: Will set player location differently.
+[33m70939221[m HEAD@{38}: commit: switched to range based loop.
+[33m9501b3ca[m HEAD@{39}: commit: Setting blackboard keys for PlayerLocation and enemy'StartLocation'
+[33mfa31fd9c[m HEAD@{40}: commit: Adding for loop to call 'StartBehaviorTree'
+[33m50e91386[m HEAD@{41}: commit: Notes on StartBehaviorTree function
+[33meebe44a5[m HEAD@{42}: commit: Adding base files of 'pedestrian' plugin.
+[33m5a91f444[m HEAD@{43}: commit: Adding 'Procedural NPC plugin' cpp files.
+[33md118a6d8[m HEAD@{44}: commit: Calling the 'start behavior tree' function.
+[33m886e1983[m HEAD@{45}: commit: Creating a 'move to' node on the behavior tree.
+[33mfead50d2[m HEAD@{46}: commit: Switching to behavior trees.
+[33md975b204[m HEAD@{47}: commit: Making the enemy stop when it loses line of sight.
+[33m751afdaf[m HEAD@{48}: commit: Making enemy follow the player (a bit glitchy)
+[33m7edecc05[m HEAD@{49}: commit: Setting enemy focus to the player.
+[33m725c0175[m HEAD@{50}: commit: Adding base files for ShooterAI Class
+[33meb87eab6[m HEAD@{51}: checkout: moving from main to AIController1
+[33meb87eab6[m HEAD@{52}: reset: moving to origin/main
+[33md7c3634c[m HEAD@{53}: checkout: moving from AIController to main
+[33md7c3634c[m HEAD@{54}: checkout: moving from main to AIController
+[33md7c3634c[m HEAD@{55}: checkout: moving from main to main
+[33md7c3634c[m HEAD@{56}: checkout: moving from ShootingInput to main
+[33m18c31423[m[33m ([m[1;31morigin/ShootingInput[m[33m)[m HEAD@{57}: commit: Addinng changes made on the Engine itself.
+[33m490d9de7[m HEAD@{58}: commit: Making IsAlive bool visible in blueprint to enable death animation
+[33mebb3a449[m HEAD@{59}: commit: Adding character health.
+[33mf6b48ffb[m HEAD@{60}: commit: Add bullet damage using OnTakeAnyDamage delegate
+[33m2796edd8[m HEAD@{61}: commit: Adding niagara particle effects on muzzle + impact point
+[33m12e31886[m HEAD@{62}: commit: Adding regenerated files since editing Build.cs
+[33me5b91b6d[m HEAD@{63}: commit: Adding Niagara
+[33mf512935d[m HEAD@{64}: commit: Adding the line trace.
+[33m2658a31c[m HEAD@{65}: commit: Drawing debug camera for ray tracing.
+[33m8a735e4f[m HEAD@{66}: commit: Adding rifle skeletal mesh (hiding old one)
+[33mbf4db970[m HEAD@{67}: commit: Spawning gun actor
+[33m5beb38c7[m HEAD@{68}: commit: Adding Mesh Component
+[33m75fab53b[m HEAD@{69}: commit: Creating scene component phase 1
+[33m122e9716[m HEAD@{70}: commit: Base files for Gun class
+[33m591217a9[m HEAD@{71}: commit: Adding Shoot Input Action

@@ -19,7 +19,13 @@ public class GAM_V1 : ModuleRules
 			"GameplayStateTreeModule",
 			"UMG",
 			"Slate", 
-			"Niagara"
+			"Niagara",
+			"MassEntity",
+			"MassCommon",
+			"MassMovement",
+			"MassSpawner",
+			"MassRepresentation",
+			"MassNavigation"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
