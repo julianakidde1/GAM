@@ -55,6 +55,11 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category ="Input")
 	class UInputAction* ShootAction;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	class UInputAction* CrouchAction;
+
+
 	
 public:
 	AGAM_V1Character();
@@ -98,6 +103,8 @@ public:
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
 	void Shoot();
+
+	void DoCrouch(); 
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AGun> GunClass;
