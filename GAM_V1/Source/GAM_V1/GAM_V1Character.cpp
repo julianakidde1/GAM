@@ -87,6 +87,9 @@ void AGAM_V1Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 		// Shooting
 		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &AGAM_V1Character::Shoot);
+
+		//Crouching
+		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &AGAM_V1Character::DoCrouch);
 	}
 	else
 	{
@@ -150,6 +153,18 @@ void AGAM_V1Character::Shoot()
 {
 	if(Gun)
 		Gun -> PullTrigger(); 
+}
+
+void AGAM_V1Character::DoCrouch()
+{
+	if (bIsCrouched)
+	{
+		UnCrouch();
+	}
+	else
+	{
+		Crouch();
+	}
 }
 
 void AGAM_V1Character::UpdateHUD()
