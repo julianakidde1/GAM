@@ -9,6 +9,24 @@
 /**
  * 
  */
+USTRUCT(BlueprintType)
+struct FMissionRow : public FTableRowBase
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int32 MissionID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString MissionName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int32 TotalEnemies;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString Description;
+};
+
 UCLASS()
 class GAM_V1_API UMissionManager : public UGameInstanceSubsystem
 {
