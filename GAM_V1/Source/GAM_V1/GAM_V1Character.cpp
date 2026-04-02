@@ -56,7 +56,7 @@ void AGAM_V1Character::BeginPlay()
 	Health = MaxHealth; 
 	UpdateHUD();
 
-	GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
+	//GetMesh()->HideBoneByName("weapon_r", EPhysBodyOp::PBO_None);
 	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
 	if (Gun)
 	{
