@@ -34,7 +34,7 @@ EBTNodeResult::Type UBTTask_FindRandomPathPoint::ExecuteTask(UBehaviorTreeCompon
 	
 
 	// Sphere Trace to find all the pathpoints in the trace radius and then get a random index of one of them
-	const bool Hit = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), Start, End, PathpointRadius, nameofobjects, false, ActorsToIgnore, DebugDrawTypes, HitArray, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
+	const bool Hit = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), Start, End, PathpointRadius, nameofobjects, false, ActorsToIgnore, EDrawDebugTrace::None, HitArray, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
 	if(Hit)
 	{
 		int32 RandomIndex = FMath::RandRange(0, HitArray.Num() - 1);
