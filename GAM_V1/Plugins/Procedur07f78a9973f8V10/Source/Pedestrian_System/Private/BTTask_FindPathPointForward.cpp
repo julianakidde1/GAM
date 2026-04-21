@@ -33,7 +33,7 @@ EBTNodeResult::Type UBTTask_FindPathPointForward::ExecuteTask(UBehaviorTreeCompo
 	
 
 	// Sphere Trace for multi objects with branch check for hit result
-	const bool Hit = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), Start, End, SphereRadius, nameofobjects, false, ActorsToIgnore, DebugDrawTypes, HitArray, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
+	const bool Hit = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), Start, End, SphereRadius, nameofobjects, false, ActorsToIgnore, EDrawDebugTrace::None, HitArray, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
 	{
 		if (Hit)
 		{
@@ -92,7 +92,7 @@ EBTNodeResult::Type UBTTask_FindPathPointForward::ExecuteTask(UBehaviorTreeCompo
 	
 
 			// Sphere Trace for multi objects with branch check for hit result
-			const bool HitRefind = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), StartRefind, EndRefind, RefindPathpointRadius, nameofobjectsRefind, false, ActorsToIgnoreRefind, DebugDrawTypes, HitArrayRefind, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
+			const bool HitRefind = UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), StartRefind, EndRefind, RefindPathpointRadius, nameofobjectsRefind, false, ActorsToIgnoreRefind, EDrawDebugTrace::None, HitArrayRefind, true, FLinearColor::Red, FLinearColor::Green, 1.0f);
 			if(HitRefind)
 			{
 				//Gets a random index from the hit result array.
