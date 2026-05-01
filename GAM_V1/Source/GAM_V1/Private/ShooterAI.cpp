@@ -15,27 +15,6 @@ void AShooterAI::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    /* switching to behavior trees
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0); 
-    if (PlayerPawn) //the player pawn will be what the enemyAI focus on
-    {
-       if (LineOfSightTo(PlayerPawn)) // the enemy can only move towards the player if they can see them
-       {
-            SetFocus(PlayerPawn);
-            MoveToActor(PlayerPawn, 200.0f);
-       }
-
-       else
-       {
-            ClearFocus(EAIFocusPriority::Gameplay);
-            StopMovement();
-       }
-        
-        
-    }
-    */
-
-
 }
 
 void AShooterAI::StartBehaviorTree(AGAM_V1Character *Player) // this function is called in the 'GameMode.cpp', the 'Player' is set there as well
