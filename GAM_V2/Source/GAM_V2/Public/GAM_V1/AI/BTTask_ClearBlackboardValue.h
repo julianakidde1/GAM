@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API UBTTask_ClearBlackboardValue : public UBTTask_BlackboardBase
+class GAM_V2_API UBTTask_ClearBlackboardValue : public UBTTask_BlackboardBase
 {
 	GENERATED_BODY()
 

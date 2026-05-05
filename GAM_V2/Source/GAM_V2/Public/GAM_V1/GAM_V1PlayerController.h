@@ -18,7 +18,7 @@ class UUserWidget;
  *  Overrides the Player Camera Manager class.
  */
 UCLASS(abstract, config="Game")
-class GAM_V1_API AGAM_V1PlayerController : public APlayerController
+class GAM_V2_API AGAM_V1PlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

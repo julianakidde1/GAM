@@ -13,7 +13,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API UHUDWidget : public UUserWidget
+class GAM_V2_API UHUDWidget : public UUserWidget
 {
 	GENERATED_BODY()
 

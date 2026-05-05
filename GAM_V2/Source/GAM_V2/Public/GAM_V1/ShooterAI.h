@@ -13,7 +13,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API AShooterAI : public AAIController
+class GAM_V2_API AShooterAI : public AAIController
 {
 	GENERATED_BODY()
 

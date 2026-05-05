@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 
-#include "Gun.h"
+#include "GAM_V1/Gun.h"
 
 #include "GAM_V1Character.generated.h"
 

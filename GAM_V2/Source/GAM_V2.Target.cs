@@ -10,6 +10,6 @@ public class GAM_V2Target : TargetRules
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V6;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_7;
-		ExtraModuleNames.Add("GAM_V1");
+		ExtraModuleNames.Add("GAM_V2");
 	}
 }

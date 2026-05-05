@@ -11,7 +11,7 @@
 #include "Gun.generated.h"
 
 UCLASS()
-class GAM_V1_API AGun : public AActor
+class GAM_V2_API AGun : public AActor
 {
 	GENERATED_BODY()
 	

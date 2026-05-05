@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API AGAM_V2Character : public AGAM_V2CharacterBase
+class GAM_V2_API AGAM_V2Character : public AGAM_V2CharacterBase
 {
 	GENERATED_BODY()
 	

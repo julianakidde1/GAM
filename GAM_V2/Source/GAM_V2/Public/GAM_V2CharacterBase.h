@@ -7,7 +7,7 @@
 #include "GAM_V2CharacterBase.generated.h"
 
 UCLASS(Abstract)
-class GAM_V1_API AGAM_V2CharacterBase : public ACharacter
+class GAM_V2_API AGAM_V2CharacterBase : public ACharacter
 {
 	GENERATED_BODY()
 

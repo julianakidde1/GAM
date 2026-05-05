@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API UBTService_PlayerLocationIfSeen : public UBTService_BlackboardBase
+class GAM_V2_API UBTService_PlayerLocationIfSeen : public UBTService_BlackboardBase
 {
 	GENERATED_BODY()
 

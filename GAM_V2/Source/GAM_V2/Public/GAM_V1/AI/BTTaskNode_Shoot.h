@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GAM_V1_API UBTTaskNode_Shoot : public UBTTaskNode
+class GAM_V2_API UBTTaskNode_Shoot : public UBTTaskNode
 {
 	GENERATED_BODY()
 
