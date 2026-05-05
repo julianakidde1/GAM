@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class GAM_V1 : ModuleRules
+public class GAM_V2 : ModuleRules
 {
-	public GAM_V1(ReadOnlyTargetRules Target) : base(Target)
+	public GAM_V2(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -31,13 +31,13 @@ public class GAM_V1 : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
 		PublicIncludePaths.AddRange(new string[] {
-			"GAM_V1",
-			"GAM_V1/Variant_Horror",
-			"GAM_V1/Variant_Horror/UI",
-			"GAM_V1/Variant_Shooter",
-			"GAM_V1/Variant_Shooter/AI",
-			"GAM_V1/Variant_Shooter/UI",
-			"GAM_V1/Variant_Shooter/Weapons"
+			"GAM_V2",
+			//"GAM_V1/Variant_Horror",
+			//"GAM_V1/Variant_Horror/UI",
+			//"GAM_V1/Variant_Shooter",
+			//"GAM_V1/Variant_Shooter/AI",
+			//"GAM_V1/Variant_Shooter/UI",
+			//"GAM_V1/Variant_Shooter/Weapons"
 		});
 
 		// Uncomment if you are using Slate UI
