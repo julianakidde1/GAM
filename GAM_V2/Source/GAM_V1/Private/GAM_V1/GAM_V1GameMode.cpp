@@ -1,10 +1,10 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "GAM_V1GameMode.h"
+#include "GAM_V1/GAM_V1GameMode.h"
 
 #include "Kismet/GameplayStatics.h"
-#include "GAM_V1Character.h"
-#include "ShooterAI.h"
+#include "GAM_V1/GAM_V1Character.h"
+#include "GAM_V1/ShooterAI.h"
 
 AGAM_V1GameMode::AGAM_V1GameMode()
 {

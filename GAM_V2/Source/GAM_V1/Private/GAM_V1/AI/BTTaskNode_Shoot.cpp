@@ -2,9 +2,9 @@
 
 
 
-#include "AI/BTTaskNode_Shoot.h"
+#include "GAM_V1/AI/BTTaskNode_Shoot.h"
 
-#include "ShooterAI.h"
+#include "GAM_V1/ShooterAI.h"
 
 UBTTaskNode_Shoot::UBTTaskNode_Shoot()
 {

@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
-#include "GAM_V1CameraManager.h"
+#include "GAM_V1/GAM_V1CameraManager.h"
 
 AGAM_V1CameraManager::AGAM_V1CameraManager()
 {

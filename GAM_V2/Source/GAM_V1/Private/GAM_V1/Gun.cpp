@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Gun.h"
+#include "GAM_V1/Gun.h"
 
 #include "Kismet/GameplayStatics.h"
 

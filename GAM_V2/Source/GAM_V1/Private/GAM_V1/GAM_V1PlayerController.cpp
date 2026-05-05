@@ -1,13 +1,13 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
-#include "GAM_V1PlayerController.h"
+#include "GAM_V1/GAM_V1PlayerController.h"
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 #include "InputMappingContext.h"
-#include "GAM_V1CameraManager.h"
+#include "GAM_V1/GAM_V1CameraManager.h"
 #include "Blueprint/UserWidget.h"
-#include "GAM_V1.h"
+#include "GAM_V1/GAM_V1.h"
 #include "Widgets/Input/SVirtualJoystick.h"
 
 AGAM_V1PlayerController::AGAM_V1PlayerController()

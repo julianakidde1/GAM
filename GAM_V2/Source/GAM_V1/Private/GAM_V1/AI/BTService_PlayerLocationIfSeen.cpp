@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AI/BTService_PlayerLocationIfSeen.h"
+#include "GAM_V1/AI/BTService_PlayerLocationIfSeen.h"
 
-#include "ShooterAI.h"
+#include "GAM_V1/ShooterAI.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 UBTService_PlayerLocationIfSeen::UBTService_PlayerLocationIfSeen()

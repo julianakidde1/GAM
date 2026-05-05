@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "GAM_V1Character.h"
+#include "GAM_V1/GAM_V1Character.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -8,9 +8,9 @@
 #include "EnhancedInputComponent.h"
 #include "InputActionValue.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "GAM_V1.h"
+#include "GAM_V1/GAM_V1.h"
 
-#include "GAM_V1PlayerController.h"
+#include "GAM_V1/GAM_V1PlayerController.h"
 
 
 AGAM_V1Character::AGAM_V1Character()
