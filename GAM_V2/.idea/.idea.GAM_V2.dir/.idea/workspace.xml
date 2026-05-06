@@ -13,11 +13,10 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f2f9c9b-72ae-4ad0-b069-8d92b83988a1" name="Changes" comment="">
+    <list default="true" id="121560b4-c659-4154-9f11-8ae626baebb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAM_V2.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V1/GAM_V1Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V1/GAM_V1Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V2CharacterBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V2CharacterBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/1GAM/GAM_V2/Blueprints/Character/Jennifer/ABP_Jennifer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/1GAM/GAM_V2/Blueprints/Character/Jennifer/ABP_Jennifer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/1GAM/GAM_V2/Blueprints/Character/Jennifer/BP_Jennifer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/1GAM/GAM_V2/Blueprints/Character/Jennifer/BP_Jennifer.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,40 +33,38 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="3DK9CN0rzWU4vVNS80fN15FCB3i" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3DMqQwG2gRXnRuakulghda51p3r" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Uproject.GAM_V2.executor&quot;: &quot;Run&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GAS__P2&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Uproject.GAM_V2.executor": "Run",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "GAS__P2",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="GAM_V2" type="Uproject" factoryName="rider.uproject">
       <configuration_1 setup="1">
@@ -145,18 +142,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0f2f9c9b-72ae-4ad0-b069-8d92b83988a1" name="Changes" comment="" />
-      <created>1778019768099</created>
+      <changelist id="121560b4-c659-4154-9f11-8ae626baebb4" name="Changes" comment="" />
+      <created>1778102283387</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1778019768099</updated>
-      <workItem from="1778019784258" duration="912000" />
-      <workItem from="1778020731292" duration="816000" />
-      <workItem from="1778021580668" duration="1944000" />
-      <workItem from="1778024217197" duration="526000" />
-      <workItem from="1778024786681" duration="1012000" />
-      <workItem from="1778025879092" duration="153000" />
-      <workItem from="1778066631323" duration="1514000" />
+      <updated>1778102283387</updated>
+      <workItem from="1778102310897" duration="930000" />
     </task>
     <servers />
   </component>
