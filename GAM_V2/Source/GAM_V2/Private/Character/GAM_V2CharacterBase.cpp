@@ -1,7 +1,7 @@
 // Copyright Juliana Kidde
 
 
-#include "GAM_V2CharacterBase.h"
+#include "Character/GAM_V2CharacterBase.h"
 
 AGAM_V2CharacterBase::AGAM_V2CharacterBase()
 {
