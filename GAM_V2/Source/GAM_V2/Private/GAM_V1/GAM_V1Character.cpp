@@ -61,7 +61,7 @@ void AGAM_V1Character::BeginPlay()
 	if (Gun)
 	{
 		Gun -> SetOwner(this); 
-		Gun ->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+		Gun ->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponHandSocket"));
 		Gun->OwnerController = GetController();
 	}
 

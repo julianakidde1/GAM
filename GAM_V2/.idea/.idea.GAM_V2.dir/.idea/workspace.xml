@@ -14,28 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f2f9c9b-72ae-4ad0-b069-8d92b83988a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V1.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V1.dir/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V1.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V1.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V1.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V2.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAM_V1.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAM_V2.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GAM_V2.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2.Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V1/GAM_V1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAM_V2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAM_V2.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V1/GAM_V1Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V1/GAM_V1Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTService_PlayerLocation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTService_PlayerLocation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTService_PlayerLocationIfSeen.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTService_PlayerLocationIfSeen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTTaskNode_Shoot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTTaskNode_Shoot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTTask_ClearBlackboardValue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/AI/BTTask_ClearBlackboardValue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Public/GAM_V1/GAM_V1.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V2CharacterBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAM_V2/Private/GAM_V2CharacterBase.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -164,6 +154,9 @@
       <workItem from="1778020731292" duration="816000" />
       <workItem from="1778021580668" duration="1944000" />
       <workItem from="1778024217197" duration="526000" />
+      <workItem from="1778024786681" duration="1012000" />
+      <workItem from="1778025879092" duration="153000" />
+      <workItem from="1778066631323" duration="1514000" />
     </task>
     <servers />
   </component>
