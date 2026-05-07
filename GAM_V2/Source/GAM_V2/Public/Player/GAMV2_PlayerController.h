@@ -8,7 +8,7 @@
 
 //forward declarations
 class UInputMappingContext; 
-class UInpuAction;
+class UInputAction;
 struct FInputActionValue;
 /**
  * 
