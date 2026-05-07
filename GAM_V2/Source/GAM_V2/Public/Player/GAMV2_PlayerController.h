@@ -6,7 +6,10 @@
 #include "GameFramework/PlayerController.h"
 #include "GAMV2_PlayerController.generated.h"
 
-class UInputMappingContext;
+//forward declarations
+class UInputMappingContext; 
+class UInpuAction;
+struct FInputActionValue;
 /**
  * 
  */
@@ -19,8 +22,14 @@ public:
 	
 protected:
 	virtual void BeginPlay() override;
+	virtual void SetupInputComponent() override; //to retrieve inputMappingContext data
 	
 private:
-	UPROPERTY(EditAnywhere, Category="Iput")
+	UPROPERTY(EditAnywhere, Category="Input")
 	TObjectPtr<UInputMappingContext> GAM_V2Context;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	TObjectPtr<UInputAction> MoveAction;
+	
+	void Move(const FInputActionValue& InputActionValue); 
 };
