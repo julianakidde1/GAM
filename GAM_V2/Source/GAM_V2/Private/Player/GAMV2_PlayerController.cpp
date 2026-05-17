@@ -39,7 +39,7 @@ void AGAMV2_PlayerController::SetupInputComponent()
 	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AGAMV2_PlayerController::Move); // binding it to the move function so it can access the data/keystrokes
 }
 
-void AGAMV2_PlayerController::Move(const FInputActionValue& InputActionValue)
+void AGAMV2_PlayerController::Move(const FInputActionValue& InputActionValue) 
 {
 	const FVector2D InputAxisVector = InputActionValue.Get<FVector2D>(); //FVector2D is the data type we used in the inputAction asset
 	const FRotator Rotation = GetControlRotation();
