@@ -4,14 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GAM_V2CharacterBase.h"
-#include "GAM_V2Character.generated.h"
+#include "Jennifer.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GAM_V2_API AGAM_V2Character : public AGAM_V2CharacterBase
+class GAM_V2_API AJennifer : public AGAM_V2CharacterBase
 {
 	GENERATED_BODY()
+public: 
+		AJennifer();
 	
 };
